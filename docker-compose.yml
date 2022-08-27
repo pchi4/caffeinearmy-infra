@@ -4,42 +4,49 @@ services:
   admin:
     image: phpmyadmin/phpmyadmin:latest
     links:
-      - db:${MYSQL_HOST}
+      - database:${MYSQL_HOST}
     depends_on:
-      - db
+      - database
     ports:
       - "8080:80"
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       PMA_HOST: ${MYSQL_HOST}
       PMA_PORT: ${MYSQL_PORT}
-
-  db:
+    env_file: .env
+    
+  database:
     image: mysql:5.7
     container_name: ${MYSQL_HOST}
     volumes:
-      - ./database/data:/var/lib/mysql
+      - database:/var/lib/mysql:rw
     ports:
       - "${MYSQL_PORT}:${MYSQL_PORT}"
     environment:
       MYSQL_TCP_PORT: ${MYSQL_PORT}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DB_NAME}
+    env_file: .env
 
   backend:
-    image: node:9-alpine
-    working_dir: /app
+    build: ./backend/
+    working_dir: /usr/src/app
     restart: always
     container_name: backend
     links:
-      - db:${MYSQL_HOST}
+      - database:${MYSQL_HOST}
     depends_on:
-      - db
+      - database
     ports:
       - "${PORT}:3000"
     volumes:
-      - ./backend:/app
+      - ./backend:/usr/src/app
+      - backend-node-modules:/usr/src/app/node_modules
     expose:
       - "${PORT}"
     command: "npm run start:dev"
     env_file: .env
+
+volumes:
+  backend-node-modules:
+  database:
