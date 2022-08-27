@@ -27,7 +27,6 @@ services:
       MYSQL_DATABASE: ${MYSQL_DB_NAME}
 
   backend:
-    build: ./backend
     image: node:9-alpine
     working_dir: /app
     restart: always
@@ -37,10 +36,10 @@ services:
     depends_on:
       - db
     ports:
-      - "${PORT}:${PORT}"
+      - "${PORT}:3000"
     volumes:
       - ./backend:/app
     expose:
       - "${PORT}"
-    command: "yarn run start:dev"
+    command: "npm run start:dev"
     env_file: .env
