@@ -38,15 +38,33 @@ services:
     depends_on:
       - database
     ports:
-      - "${PORT}:3000"
+      - "${BACKEND_PORT}:3000"
     volumes:
       - ./backend:/usr/src/app
       - backend-node-modules:/usr/src/app/node_modules
     expose:
-      - "${PORT}"
+      - "${BACKEND_PORT}"
     command: "npm run start:dev"
+    env_file: .env
+
+  frontend:
+    build: ./frontend/
+    working_dir: /usr/src/app
+    restart: always
+    container_name: frontend
+    depends_on:
+      - backend
+    ports:
+      - "${FRONTEND_PORT}:3000"
+    volumes:
+      - ./frontend:/usr/src/app
+      - frontend-node-modules:/usr/src/app/node_modules
+    expose:
+      - "${FRONTEND_PORT}"
+    command: "npm run start"
     env_file: .env
 
 volumes:
   backend-node-modules:
+  frontend-node-modules:
   database:
