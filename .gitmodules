@@ -1,6 +1,8 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/pchi4/caffeinearmy-backend.git
+	branch = master
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/pchi4/caffeinearmy-frontend.git
+	branch = master
