@@ -20,6 +20,7 @@ services:
     container_name: ${MYSQL_HOST}
     volumes:
       - database:/var/lib/mysql:rw
+      - ./db:/docker-entrypoint-initdb.d
     ports:
       - "${MYSQL_PORT}:${MYSQL_PORT}"
     environment:
