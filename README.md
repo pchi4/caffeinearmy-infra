@@ -24,7 +24,7 @@
 ### E logo em seguida 
 
  ```
-  docker-compose up --build
+  docker-compose up -d
    ```
 
 # Front-end
