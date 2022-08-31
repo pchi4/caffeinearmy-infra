@@ -7,13 +7,11 @@
 ### Mobile: 
 ![image](https://user-images.githubusercontent.com/84159325/187583704-1526c7b4-854d-4b62-9b60-226e0d3a6143.png)
 
-
-
-## Cadastrar Usuário: 
+## Cadastro de Usuário: 
 ![image](https://user-images.githubusercontent.com/84159325/187583439-15eee99e-2a87-48e5-a9f1-96204e1ade53.png)
 
 ### Na rota http://localhost:3002/home temos a pagina de consultas:
-
+#### Aqui você vai poder consulta empresas através do cnpj e obeter informações sobre ela 
 ![image](https://user-images.githubusercontent.com/84159325/187583627-27b8f70a-2bd0-4740-8af0-23ad79ef850f.png)
 
 ### Mobile 
