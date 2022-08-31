@@ -7,7 +7,7 @@
   ```
   git submodule init 
    ```
-### Para trazer os arquivos 
+### Para trazer os arquivos: 
 
  ```
   git submodule update 
@@ -15,13 +15,13 @@
 
 ## Docker
 
-### Utilize o comando para criar os containers
+### Utilize o comando para criar os containers:
 
  ```
   docker-compose up --build
    ```
    
-### E logo em seguida 
+### E logo em seguida: 
 
  ```
   docker-compose up -d
