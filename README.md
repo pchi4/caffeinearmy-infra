@@ -1,9 +1,19 @@
 # Projeto Desafio DEV Caffeine Army 
 
-## Para trazer os arquivos dos submodules execute: 
+# Back-end
+
+## Git submodules: 
 
 ### `git submodule init` 
-### e logo em seguida `git submodule update` 
+### e logo em seguida `git submodule update`
+
+
+## Docker
+
+### Utilize o `docker-compose up --build` para criar os containers
+### E logo em seguida `docker-compose up -d `
+
+# Front-end
 
 ## Tela de login: 
 
