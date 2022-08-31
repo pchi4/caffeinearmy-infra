@@ -4,14 +4,28 @@
 
 ## Git submodules: 
 
-### `git submodule init` 
-### e logo em seguida `git submodule update`
+  ```
+  git submodule init 
+   ```
+### Para trazer os arquivos 
 
+ ```
+  git submodule init 
+   ```
 
 ## Docker
 
-### Utilize o `docker-compose up --build` para criar os containers
-### E logo em seguida `docker-compose up -d `
+### Utilize o comando para criar os containers
+
+ ```
+  docker-compose up --build
+   ```
+   
+### E logo em seguida 
+
+ ```
+  docker-compose up --build
+   ```
 
 # Front-end
 
