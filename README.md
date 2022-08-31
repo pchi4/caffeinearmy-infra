@@ -10,7 +10,7 @@
 ### Para trazer os arquivos 
 
  ```
-  git submodule init 
+  git submodule update 
    ```
 
 ## Docker
