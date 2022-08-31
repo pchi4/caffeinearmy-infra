@@ -1,5 +1,10 @@
 # Projeto Desafio DEV Caffeine Army 
 
+## Para trazer os arquivos dos submodules execute: 
+
+### `git submodule init` 
+### e logo em seguida `git submodule update` 
+
 ## Tela de login: 
 
 ![image](https://user-images.githubusercontent.com/84159325/187583369-1eb172e3-4ad2-497d-a6cf-4d245b8af427.png)
