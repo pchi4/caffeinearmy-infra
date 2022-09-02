@@ -18,13 +18,13 @@
 ### Utilize o comando para criar os containers:
 
  ```
-  docker-compose up --build
+  docker-compose up -d
    ```
    
-### E logo em seguida: 
+### Para bildar utilize esse: 
 
  ```
-  docker-compose up -d
+  docker-compose up --build
    ```
 
 # Front-end
