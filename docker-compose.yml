@@ -18,6 +18,7 @@ services:
   database:
     image: mysql:5.7
     container_name: ${MYSQL_HOST}
+    restart: always
     volumes:
       - database:/var/lib/mysql:rw
       - ./db:/docker-entrypoint-initdb.d
