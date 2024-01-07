@@ -14,9 +14,10 @@ services:
       PMA_HOST: ${MYSQL_HOST}
       PMA_PORT: ${MYSQL_PORT}
     env_file: .env
-    
+
   database:
     image: mysql:5.7
+    platform: linux/amd64
     container_name: ${MYSQL_HOST}
     restart: always
     volumes:
