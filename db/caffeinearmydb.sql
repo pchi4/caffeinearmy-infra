@@ -4,8 +4,8 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-Drop table if exists `empresa`;
-CREATE TABLE `empresa` (
+Drop table if exists `company`;
+CREATE TABLE `company` (
   `id` int(11) NOT NULL,
   `cnpj` varchar(255) NOT NULL,
   `nomeFantasia` varchar(500) NOT NULL,
@@ -19,10 +19,10 @@ CREATE TABLE `empresa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `empresa`
+-- Extraindo dados da tabela `company`
 --
 
-INSERT INTO `empresa` (`id`, `cnpj`, `nomeFantasia`, `email`, `telefone`, `razaoSocial`, `nomeLojista`, `telefoneLojista1`, `telefoneLojista2`, `emailLojista`) VALUES
+INSERT INTO `company` (`id`, `cnpj`, `nomeFantasia`, `email`, `telefone`, `razaoSocial`, `nomeLojista`, `telefoneLojista1`, `telefoneLojista2`, `emailLojista`) VALUES
 (1, '99567792000148', 'Loja de Suplementos', 'douglas.lopes@caffeine.com.br', '(71)985589648', 'LOJA DE SUPLEMENTOS', 'Douglas Lopes', '(71)987141420', '(71)987451123', 'pchialoopes@gmailcom'),
 (2, '79179729000127', 'Loja de Suplementos', 'artefatoshistoricos@hotmail.cmm.br', '(71)987412536', 'LOJA DE ARTEFATOS', 'Lucas Monteiro', '(75)8787499', '(71)985634122', 'lucamont@email.com'),
 (3, '79179729000127', 'Loja de Suplementos', 'restaurantecomidaakilo@gmail.cmm.br', '(71)985589625', 'RESTAURANTE', 'Amanda Souza', '(75)8787499', '(71)987451147', 'amanda2323@email.com'),
@@ -31,13 +31,13 @@ INSERT INTO `empresa` (`id`, `cnpj`, `nomeFantasia`, `email`, `telefone`, `razao
 -- --------------------------------------------------------
 
 --
--- Índices para tabela `empresa`
+-- Índices para tabela `company`
 --
-ALTER TABLE `empresa`
+ALTER TABLE `company`
   ADD PRIMARY KEY (`id`);
 
 
--- AUTO_INCREMENT de tabela `empresa`
+-- AUTO_INCREMENT de tabela `company`
 --
-ALTER TABLE `empresa`
+ALTER TABLE `company`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
